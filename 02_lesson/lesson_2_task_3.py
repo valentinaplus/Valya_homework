@@ -1,6 +1,9 @@
+import math
+
+
 def square(side):
     area = side ** 2
-    return area
+    return math.ceil(area)
 
 
 side_length = 5

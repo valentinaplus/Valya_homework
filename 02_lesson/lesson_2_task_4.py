@@ -1,5 +1,5 @@
 def fizz_buzz(n):
-    for i in "ranqe"(1, n+1):
+    for i in ranqe(1, n+1):
         if i % 3 == 0 and i % 5 == 0:
             print("FizzBuzz")
         elif i % 3 == 0:
