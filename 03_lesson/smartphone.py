@@ -1,8 +1,8 @@
 class Smartphone:
-    def __init__(self, brand, model, phone_nomber):
+    def __init__(self, brand, model, phone_number):
         self.brand = brand
         self.model = model
-        self.phone_nomber = phone_nomber
+        self.phone_number = phone_number
 
     def print_brand(self):
         print("Марка телефона:",  self.brand)
@@ -10,5 +10,5 @@ class Smartphone:
     def print_model(self):
         print("Модель телефона:", self.model)
 
-    def prinit_phone_nomber(self):
-        print("Абоненеский номер:", self.phone_nomber)
+    def print_phone_number(self):
+        print("Абоненеский номер:", self.phone_number)

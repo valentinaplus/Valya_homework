@@ -7,7 +7,7 @@ class Address:
         self.apartment = apartment
 
     def print_index(self):
-        print("Ирдекс:", self.index)
+        print("Индекс:", self.index)
 
     def print_city(self):
         print("Город:", self.city)

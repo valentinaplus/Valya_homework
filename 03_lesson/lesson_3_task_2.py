@@ -8,10 +8,11 @@ catalog = [
     Smartphone("xiaomi", "redmi", "+79361322467")
 ]
 
-for smartphone in catalog(5):
-    brand = input("Марка телефона: ")
-    model = input("Модель телефона: ")
-    phone_number = input("абоненский номер: ")
+brand = input("Марка телефона: ")
+model = input("Модель телефона: ")
+phone_number = input("абоненский номер: ")
 
 for smartphone in catalog:
-    print(f"{smartphone.brand} - {smartphone.mode}{smartphone.phone_number}")
+    print(f"{smartphone.brand} - {smartphone.model}.{smartphone.phone_number}")
+
+    print(f"{brand} - {model}. {phone_number}")
