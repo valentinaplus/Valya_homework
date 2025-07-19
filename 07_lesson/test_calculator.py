@@ -1,8 +1,9 @@
 import pytest
+from pages.calculator_page import CalculatorPage
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.chrome.options import Options
-from calculator_page import CalculatorPage
+
 
 @pytest.fixture
 def driver():

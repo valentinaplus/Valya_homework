@@ -42,10 +42,5 @@ def test_shop_flow(driver):
     checkout_page.fill_form_and_continue("Valentina", "Plyusnina", "12345")
 
     total_str = overview_page.get_total()
-    total_float = float(total_str)
 
-    expected_total = 58.29
-    assert abs(total_float - expected_total) < 0.01, f"Expected total {expected_total}, but got {total_float}"
-
-
-
+    assert total_str == "58.29"
