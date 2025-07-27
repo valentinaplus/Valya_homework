@@ -1,8 +1,12 @@
 import pytest
 from api_client import YougileAPI
+import os
+from dotenv import load_dotenv
 
-base_url = "https://ru.yougile.com/"
-token = "DNrUX2O5iTVglkKs444HyLIghBHDDvKiIFK5hAOou-U-fziljYiZBz0bBmTbP0b3"
+load_dotenv()
+
+base_url = os.getenv("YOUGILE_BASE_URL")
+token = os.getenv("YOUGILE_API_TOKEN")
 
 
 @pytest.fixture(scope="module")
