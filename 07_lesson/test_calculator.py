@@ -14,6 +14,7 @@ def driver():
     yield driver
     driver.quit()
 
+
 def test_slow_calculator(driver):
     page = CalculatorPage(driver)
     page.open()
@@ -29,4 +30,3 @@ def test_slow_calculator(driver):
 
     result = page.get_result(previous_text)
     assert result == "15"
-
