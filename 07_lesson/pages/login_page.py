@@ -2,6 +2,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+
 class LoginPage:
     URL = "https://www.saucedemo.com/"
 
@@ -13,7 +14,8 @@ class LoginPage:
         self.driver.get(self.URL)
 
     def enter_username(self, username):
-        username_input = self.wait.until(EC.visibility_of_element_located((By.ID, "user-name")))
+        username_input = self.wait.until(EC.visibility_of_element_located((
+            By.ID, "user-name")))
         username_input.clear()
         username_input.send_keys(username)
 

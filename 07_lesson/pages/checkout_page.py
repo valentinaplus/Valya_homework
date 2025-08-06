@@ -2,6 +2,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+
 class CheckoutPage:
     def __init__(self, driver, timeout=10):
         self.driver = driver
@@ -34,4 +35,3 @@ class CheckoutPage:
         self.fill_last_name(last_name)
         self.fill_postal_code(postal_code)
         self.click_continue()
-
