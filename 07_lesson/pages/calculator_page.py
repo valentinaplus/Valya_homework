@@ -2,6 +2,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+
 class CalculatorPage:
     URL = "https://bonigarcia.dev/selenium-webdriver-java/slow-calculator.html"
 
@@ -19,18 +20,16 @@ class CalculatorPage:
 
     def press_button(self, symbol):
         button = self.wait.until(
-            EC.element_to_be_clickable((By.XPATH,
-    f'//span[text()="{symbol}"]')
+            EC.element_to_be_clickable((
+                By.XPATH, f'//span[text()="{symbol}"]')
             )
         )
-        self.driver.execute_script("arguments[0].scrollIntoView(true);", button)
+        self.driver.execute_script("arguments[0].scrollIntoView(true);",
+                                   button)
         self.driver.execute_script("arguments[0].click();", button)
-
 
     def get_result(self, previous_text):
         self.wait.until(
-            lambda driver: driver.find_element(By.CSS_SELECTOR, ".screen").text != previous_text)
+            lambda driver: driver.find_element(
+                By.CSS_SELECTOR, ".screen").text != previous_text)
         return self.driver.find_element(By.CSS_SELECTOR, ".screen").text
-
-
-

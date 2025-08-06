@@ -8,6 +8,7 @@ from pages.cart_page import CartPage
 from pages.checkout_page import CheckoutPage
 from pages.overview_page import OverviewPage
 
+
 @pytest.fixture
 def driver():
     options = Options()
@@ -16,6 +17,7 @@ def driver():
     driver.implicitly_wait(5)
     yield driver
     driver.quit()
+
 
 def test_shop_flow(driver):
     login_page = LoginPage(driver)
